@@ -1,0 +1,97 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="idSigninDialog"
+        resizable="true"
+        draggable="true"
+        contentWidth="30%"
+        title="Sign Up"
+    >
+        <beginButton>
+            <Button
+                id="idsignUPButton12"
+                text="Sign Up"
+                press="onSignUP"
+                type="Success"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                id="idSigninCancelButton"
+                text="Cancel"
+                press="onCloseSigninDialog"
+                type="Negative"
+            />
+        </endButton>
+        <content>
+            <form:SimpleForm
+                id="idSigninForm12"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <Label
+                    id="idUsernameLable2"
+                    text="User Name"
+                />
+                <Input
+                    id="idusernameInput2"
+                    value="{localModel>/username}"
+                    placeholder="Enter UserName"
+                />
+                <Label
+                    id="idEmailLable2"
+                    text="Email"
+                />
+                <Input
+                    id="idEmailInput2"
+                    value="{localModel>/email}"
+                    placeholder="Enter Email"
+                />
+                <Label
+                    id="idPasswordLabel2"
+                    text="Password"
+                />
+                <Input
+                    id="idPasswordInput2"
+                    value="{localModel>/password}"
+                    placeholder="Enter Password"
+                    type="Password"
+                />
+                <Label
+                    id="idphonenumberLabel2"
+                    text="phone number"
+                />
+                <Input
+                    id="idphonenumberInput2"
+                    value="{localModel>/phonenumber}"
+                    placeholder="Enter phonenumber"
+                />
+                <Label
+                    id="idaddressLabel2"
+                    text="Address"
+                />
+                <Input
+                    id="idaddressInput2"
+                    value="{localModel>/address}"
+                    placeholder="Enter address"
+                />
+            </form:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

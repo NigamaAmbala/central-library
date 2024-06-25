@@ -1,0 +1,100 @@
+<mvc:View
+    controllerName="com.app.librarysystem.controller.AllUsers"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="AllUsersid"
+        title="All Users"
+    >
+        <headerContent>
+            <Button
+            id="idbackbutton"
+            text="Back"
+            press="onBackbutton"
+            icon="sap-icon://nav-back">
+            </Button>
+        </headerContent>
+        <Table
+            id="idAllUsers"
+            items="{path:'/Users',  parameters : {
+            $count : true
+           
+        }}"
+            alternateRowColors="true"
+            backgroundDesign="Transparent"
+            mode="MultiSelect"
+        >
+            <headerToolbar>
+                <OverflowToolbar id="idActiveloanHeader">
+                    <Title
+                            id="idALlusersTableHeaderTitle"
+                            class="classTableHeaderTitle"
+                            text="Total Users: {/Users/$count}"
+                        />
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column id="idUseridColumn14">
+                    <Title
+                        id="idUseridtitle"
+                        text="User Id"
+                    />
+                </Column>
+                <Column id="idusernameColumn">
+                    <Title
+                        id="idUsernametitle"
+                        text="User Name"
+                    />
+                </Column>
+                <Column id="idEmailColumn14">
+                    <Title
+                        id="idemailtitle14"
+                        text="Email"
+                    />
+                </Column>
+                <Column id="idPhonenumberColumn14">
+                    <Title
+                        id="idPhonenumber"
+                        text="Phonenumber"
+                    />
+                </Column>
+                <Column id="idAddressColumn14">
+                    <Title
+                        id="idAddressidtitle14"
+                        text="Address"
+                    />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem id="idColumnListUserLoan">
+                    <cells>
+                        <Text
+                            id="idUserIdvalue14"
+                            text="{ID}"
+                        />
+                        <Text
+                            id="idUSERNAMEvalue"
+                            text="{username}"
+                        />
+                        <Text
+                            id="idEmailText"
+                            text="{email}"
+                        />
+                        <Text
+                            id="idphonenumberText"
+                            text="{path: 'phonenumber', formatter: '.formatPhoneNumber'}"
+                        />
+                        <Text
+                            id="idaddressvalue"
+                            text="{address}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

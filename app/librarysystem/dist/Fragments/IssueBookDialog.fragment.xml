@@ -1,0 +1,109 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="idissuebooksDialog"
+        resizable="true"
+        draggable="true"
+        contentWidth="80%"
+        contentHeight="70%"
+        title="Issue Books Details"
+    >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Text text="Issue Books Details" />
+                </contentLeft>
+                <contentRight>
+                    <Button
+                        id="onissuecancelbtn"
+                        icon="sap-icon://sys-cancel"
+                        press="onissuebookscancelbtn"
+                        type="Reject"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <VBox
+            class="cancelbtn"
+            alignItems="End"
+        />
+        <VBox
+            class="sapUiSmallMargin"
+            alignItems="Center"
+        >
+            <Table
+                class="issuebooksheader"
+                id="issuebooksTable"
+                mode="MultiSelect"
+                alternateRowColors="true"
+                items="{ path:'/Reservation',  parameters : {
+            $count : true
+           
+        }}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar
+                        id="IssueBooksTableHeader"
+                        class="issuebookheader"
+                    >
+                        <Title
+                            id="idIssueBooksTableHeaderTitle"
+                            class="classTableHeaderTitle"
+                            text="Total Issue Books: {/Reservation/$count}"
+                        />
+ 
+                        <Button
+                            id="idreservebtn"
+                            text="Issue"
+                            press="onIssuebtnpress"
+                            type="Emphasized"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Book Id" />
+                    </Column>
+                    <Column>
+                        <Text text="ISBN" />
+                    </Column>
+                    <Column>
+                        <Text text="Reservation Id" />
+                    </Column>
+                    <Column>
+                        <Text text="User Id" />
+                    </Column>
+                    <Column>
+                        <Text text="UserName" />
+                    </Column>
+                    <Column>
+                        <Text text="Title" />
+                    </Column>
+                    <Column class="issuebookheader">
+                        <Text text="Request Date" />
+                    </Column>
+                    <Column visible="false">
+                        <Text text="availability " />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{books/ID}" />
+                            <Text text="{books/ISBN}" />
+                            <Text text="{ID}" />
+                            <Text text="{users/ID}" />
+                            <Text text="{users/username}" />
+                            <Text text="{books/title}" />
+                            <Text text="{Reservationdate}" />
+                            <Text text="{books/quantityAvailable}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>

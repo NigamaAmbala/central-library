@@ -1,0 +1,16 @@
+/* Enter your custom styles here */
+.Homepageclass {
+    background-image: url("https://cdnassets.hw.net/87/6f/d98ddca34fe6be40243681d08a4c/2129166935-stlouiscentrallibrary-cannondesign-0313ar-01-tcm20-1862550.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  .classtext {
+    font-size: 100%;
+    color:brown;
+  }
+  .idusernamecss {
+    font-size: 100%;
+    color: darkblue;
+  }

@@ -1,0 +1,91 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="idReservedbooksDialog"
+        resizable="true"
+        draggable="true"
+        contentWidth="80%"
+        contentHeight="70%"
+        title="Reserved Books Details"
+    >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Text text="Reserved Books Details" />
+                </contentLeft>
+                <contentRight>
+                    <Button
+                        id="onreservedcancelbtn"
+                        icon="sap-icon://sys-cancel"
+                        press="onreservedbookscancelbtn"
+                        type="Reject"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <VBox
+            class="cancelbtn"
+            alignItems="End"
+        />
+        <VBox
+            class="sapUiSmallMargin"
+            alignItems="Center"
+        >
+            <Table
+                class="Reservedbooksheader"
+                id="ReservedbooksTable"
+                mode="MultiSelect"
+                alternateRowColors="true"
+                items="{ path:'/Reservation',  parameters : {
+            $count : true
+           
+        }}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar
+                        id="ReservedBooksTableHeader"
+                        class="Reservedbookheader"
+                    >
+                        <Title
+                            id="idReservedBooksTableHeaderTitle"
+                            class="classTableHeaderTitle"
+                            text="Total Reserved Books: {/Reservation/$count}"
+                        />
+
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Book Id" />
+                    </Column>
+                    <Column>
+                        <Text text="ISBN" />
+                    </Column>
+                    <Column>
+                        <Text text="Reservation Id" />
+                    </Column>
+                    <Column>
+                        <Text text="Title" />
+                    </Column>
+                    <Column class="Reservedbookheader">
+                        <Text text="Request Date" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{books/ID}" />
+                            <Text text="{books/ISBN}" />
+                            <Text text="{ID}" />
+                            <Text text="{books/title}" />
+                            <Text text="{Reservationdate}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,11 @@
+ID,title,author,ISBN,genre,stock,quantityAvailable,language
+1,Harry poter,jony,9780316769488,Thriller,20,20,English
+2,The Hobbit,J.R.R. Tolkien,9780547928227,Fantasy,20,20,English
+3,The Road,Roy,978054792876545,Drama,20,20,English
+4,To Kill a Mock,Harper,93566898534567,Thriller,10,10,English
+5,Jane Eyre,Charlotte Bronte,6680547928227,Drama,30,30,English
+6,East of Eden,John Steinbeck,8880547928227,Fantasy,10,10,English
+7,Frankenstein,Mary Shelley,9780567628227,Drama,20,20,English
+8,Life of Pi,Yann Martel,9780545667657,Thriller,10,10,English
+9,The Martian,Andy Welt,9780545455454,Fiction,10,10,English
+10,Catching Fire,Suzanne,978054343322,Drama,20,20,English

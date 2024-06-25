@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="com.app.librarysystem.controller.Homeview"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+        class="Homepageclass"
+    >
+        <headerContent>
+            <MenuButton
+                id="_IDMenuButton1"
+                text="Login"
+            >
+                <Menu id="_IDMenu1">
+                    <items>
+                        <MenuItem
+                            id="_IDMenuItem1"
+                            text="User Login"
+                            press="Userloginbutton"
+                        />
+                        <MenuItem
+                            id="_IDMenuItem2"
+                            text="Admin Login"
+                            press="loginbutton"
+                        />
+                    </items>
+                </Menu>
+            </MenuButton>
+             <Button
+                id="idsignbutton12"
+                text="Sign Up"
+                press="Signbutton"
+            />
+
+        </headerContent>
+    </Page>
+</mvc:View>
